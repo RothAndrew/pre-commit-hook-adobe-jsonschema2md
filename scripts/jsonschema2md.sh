@@ -2,10 +2,10 @@
 
 set -e
 
-# Throw an error message if the tool 'jsonschema2md' is not installed
-if ! command -v jsonschema2md > /dev/null; then
-  echo "Error: 'jsonschema2md' is not installed. Please install it by running 'npm install -g jsonschema2md'."
+# Throw an error message if the tool 'npx' is not installed
+if ! command -v npx > /dev/null; then
+  echo "Error: 'npx' is not installed. Please install it and try again."
   exit 1
 fi
 
-jsonschema2md "${@}"
+npx --yes @adobe/jsonschema2md "${@}"
