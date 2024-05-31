@@ -1,0 +1,7 @@
+- id: jsonschema2md
+  args: []
+  description: Generate markdown documentation from JSON schema
+  entry: scripts/jsonschema2md.sh
+  language: script
+  name: jsonschema2md
+  require_serial: true
