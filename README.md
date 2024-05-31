@@ -10,11 +10,11 @@ repos:
   - repo: https://github.com/losisin/helm-values-schema-json
     rev: vX.Y.Z
     hooks:
-    - id: helm-schema
-      args: ["-input", "chart/values.yaml", "-output", "chart/values.schema.json", "-draft", "7", "-indent", "2"]
+      - id: helm-schema
+        args: ["-input", "chart/values.yaml", "-output", "chart/values.schema.json", "-draft", "7", "-indent", "2"]
   - repo: https://github.com/rothandrew/pre-commit-hook-adobe-jsonschema2md
     rev: X.Y.Z
     hooks:
-    - id: jsonschema2md
-      args: ["-d", "chart", "-o", "chart/docs", "--example-format", "yaml", "--header", "true"]
+      - id: jsonschema2md
+        args: ["-d", "chart", "-o", "chart/docs", "-x", "-", "--example-format", "yaml", "--header", "true"]
 ```
